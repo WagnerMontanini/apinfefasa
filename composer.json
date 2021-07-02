@@ -1,0 +1,30 @@
+{
+  "name": "wagnermontanini/apinfefasa",
+  "description": "Biblioteca API para integração com o webservice do Fasa Nfe",
+  "keywords": [
+    "Fasa Nfe",
+    "Nfe",
+    "apinfefasa",
+    "Nota Fiscal Eletronica",
+    "WagnerMontanini"
+  ],
+  "homepage": "https://www.fasainformatica.com.br",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wagner Montanini",
+      "email": "wagnermontanini@hotmail.com.br",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.3",
+    "ext-json": "*",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "WagnerMontanini\\ApiNfeFasa\\": "src"
+    }
+  }
+}
