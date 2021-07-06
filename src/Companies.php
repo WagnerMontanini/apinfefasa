@@ -15,15 +15,10 @@ class Companies extends ApiNfeFasa
     /**
      * Companies constructor.
      * @param string $apiUrl
-     * @param string $email
-     * @param string $password
+     * @param string $token
      */
-    public function __construct(string $apiUrl, string $email, string $password)
+    public function __construct(string $apiUrl, string $token)
     {
-        $token = (new Me($apiUrl))->auth($email,$password)->response()->token;
-        if( empty($token) ){
-            throw new \Exception('Não é possível realizar login');
-        }
         parent::__construct($apiUrl, $token);
     }
 

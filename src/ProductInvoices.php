@@ -16,16 +16,11 @@ class ProductInvoices extends ApiNfeFasa
     /**
      * ProductInvoices constructor
      * @param string $apiUrl
-     * @param string $email
-     * @param string $password
-     * @param Companies $company
+     * @param string $token
+     * @param string $company_id
      */
-    public function __construct(string $apiUrl, string $email, string $password, string $company_id)
+    public function __construct(string $apiUrl, string $token, string $company_id)
     {   
-        $token = (new Me($apiUrl))->auth($email,$password)->response()->token;
-        if( empty($token) ){
-            throw new \Exception('Não é possível realizar login');
-        }
         parent::__construct($apiUrl, $token);
         $this->company = $company_id;
     }
