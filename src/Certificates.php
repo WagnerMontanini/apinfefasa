@@ -41,15 +41,18 @@ class Certificates extends ApiNfeFasa
     }
 
     /**
-     * @param array $fields
+     * @param array $files
      * @return Certificates
      */
-    public function create(array $fields): Certificates
+    public function create(array $files): Certificates
     {
         $this->request(
             "POST",
             "/companies/{$this->company}/certificates",
-            $fields
+            array(
+                "certificate" => curl_file_create($files["tmp_name"], $files["type"]),
+                "password" => $files["password"]
+            )
         );
 
         return $this;
