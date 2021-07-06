@@ -9,9 +9,6 @@ namespace WagnerMontanini\ApiNfeFasa;
  */
 class Companies extends ApiNfeFasa
 {
-    /** @var array */
-    private $headers;
-
     /**
      * Companies constructor.
      * @param string $apiUrl
