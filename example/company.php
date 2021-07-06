@@ -7,8 +7,7 @@ use WagnerMontanini\ApiNfeFasa\Companies;
 
 $companies = new Companies(
     "http://fasa_nfe.test/v1",
-    "fasa@fasainformatica.com.br",
-    "123456789"
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbmZlLmZhc2FpbmZvcm1hdGljYS5jb20uYnJcL3YxXC9hdXRoXC90b2tlbiIsImlhdCI6MTYyNTQ5MTQyOSwiZXhwIjoxNjI1NTc3ODI5LCJuYmYiOjE2MjU0OTE0MjksImp0aSI6InJPbXVORU5JUk1BSUkzb20iLCJzdWIiOiJkYzU4ZGMwNS00MDUyLTQ4ZjgtYTU4OS01ZTIwMjllMzRmYzkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.58K2S3ApGsgpgX56Ldto3pTKg9V2Mo2tEVkZd1jIuh0"
 );
 
 /**
