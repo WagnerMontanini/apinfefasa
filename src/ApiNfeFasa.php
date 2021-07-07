@@ -94,7 +94,11 @@ abstract class ApiNfeFasa
     private function dispatch(): void
     {
         $curl = curl_init();
-                
+        
+        if (empty($this->fields["files"])) {
+            $this->fields = (!empty($this->fields) ? http_build_query($this->fields) : null);
+        }
+
         curl_setopt_array($curl, array(
             CURLOPT_URL => "{$this->apiUrl}{$this->endpoint}",
             CURLOPT_RETURNTRANSFER => true,
@@ -107,7 +111,7 @@ abstract class ApiNfeFasa
             CURLOPT_POSTFIELDS => $this->fields,
             CURLOPT_HTTPHEADER => $this->headers,
         ));
-        
+
         $this->response = json_decode(curl_exec($curl));
         curl_close($curl);
     }
