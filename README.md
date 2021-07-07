@@ -27,7 +27,7 @@ Você pode saber mais **[clicando aqui](https://fasainformatica.com.br)**.
 Uploader is available via Composer:
 
 ```bash
-"wagnermontanini/apinfefasa": "^1.0"
+"wagnermontanini/apinfefasa": "^1.1"
 ```
 
 or run

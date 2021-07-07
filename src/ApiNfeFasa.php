@@ -33,7 +33,7 @@ abstract class ApiNfeFasa
     public function __construct(string $apiUrl,?string $token = null)
     {
         $this->apiUrl = $apiUrl;
-        $headers = empty($token)?array("Content-Type"=>"application/json"):array("Content-Type"=>"application/json","Authorization"=>"Bearer {$token}");
+        $headers = empty($token)?null:array("Authorization"=>"Bearer {$token}");
         $this->headers($headers);
 
     }
@@ -94,7 +94,7 @@ abstract class ApiNfeFasa
     private function dispatch(): void
     {
         $curl = curl_init();
-    
+                
         curl_setopt_array($curl, array(
             CURLOPT_URL => "{$this->apiUrl}{$this->endpoint}",
             CURLOPT_RETURNTRANSFER => true,
