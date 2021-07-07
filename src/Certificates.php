@@ -50,7 +50,8 @@ class Certificates extends ApiNfeFasa
             "POST",
             "/companies/{$this->company}/certificates",
             array(
-                "certificate" => curl_file_create($files["tmp_name"], "application/x-pkcs12"),
+                "file" => true,
+                "certificate" => curl_file_create($files["certificate"]),
                 "password" => $files["password"]
             )
         );
