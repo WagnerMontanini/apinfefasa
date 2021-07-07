@@ -104,7 +104,7 @@ abstract class ApiNfeFasa
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => $this->method,
-            CURLOPT_POSTFIELDS => \json_encode($this->fields),
+            CURLOPT_POSTFIELDS => $this->fields,
             CURLOPT_HTTPHEADER => $this->headers,
         ));
         
